@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ModMetaData>
+	<name>Helixien Gas Brazier</name>
+	<author>CiXwOw</author>
+	<packageId>CiXwOw.HelixienBrazier</packageId>
+	<description>Adds a brazier for your royal pawns that is powered by Helixien gas from Valilla Furniture Expanded - Power.
+Includes darklight variant.</description>
+	<supportedVersions>
+		<li>1.3</li>
+    </supportedVersions>
+	<modDependencies>
+		<li>
+			<packageId>VanillaExpanded.VFEPower</packageId>
+			<displayName>Vanilla Furniture Expanded - Power</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2062943477</steamWorkshopUrl>
+			<downloadUrl></downloadUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>Ludeon.RimWorld.Royalty</li>
+		<li>VanillaExpanded.VFEPower</li>
+	</loadAfter>
+</ModMetaData>

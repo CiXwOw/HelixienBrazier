@@ -11,6 +11,10 @@ Includes darklight variant.</description>
     </supportedVersions>
 	<modDependencies>
 		<li>
+			<packageId>Ludeon.RimWorld.Royalty</packageId>
+			<displayName>Royalty</displayName>
+		</li>
+		<li>
 			<packageId>VanillaExpanded.VFEPower</packageId>
 			<displayName>Vanilla Furniture Expanded - Power</displayName>
 			<steamWorkshopUrl>steam://url/CommunityFilePage/2062943477</steamWorkshopUrl>

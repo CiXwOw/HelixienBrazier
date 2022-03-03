@@ -32,7 +32,7 @@
 		<comps>
 			<li Class="GasNetwork.CompProperties_GasTrader">
 				<compClass>GasNetwork.CompGasTrader</compClass>
-				<gasConsumption>1</gasConsumption>
+				<gasConsumption>2</gasConsumption>
 			</li>
 			<li Class="CompProperties_Glower">
 				<glowRadius>10</glowRadius>
@@ -113,7 +113,7 @@
 		<comps Inherit="False">
 			<li Class="GasNetwork.CompProperties_GasTrader">
 				<compClass>GasNetwork.CompGasTrader</compClass>
-				<gasConsumption>0.5</gasConsumption>
+				<gasConsumption>1.5</gasConsumption>
 			</li>
 			<li Class="CompProperties_Glower">
 				<glowRadius>10</glowRadius>

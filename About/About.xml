@@ -24,5 +24,10 @@ Includes darklight variant.</description>
 	<loadAfter>
 		<li>Ludeon.RimWorld.Royalty</li>
 		<li>VanillaExpanded.VFEPower</li>
+		<li>VanillaExpanded.VFECore</li>
+		<li>OskarPotocki.VanillaFactionsExpanded.MedievalModule</li>
+		<li>OskarPotocki.VFE.Vikings</li>
+		<li>OskarPotocki.VanillaExpanded.RoyaltyPatches</li>
+		<li>OskarPotocki.VanillaExpanded.IdeologyPatches</li>
 	</loadAfter>
 </ModMetaData>

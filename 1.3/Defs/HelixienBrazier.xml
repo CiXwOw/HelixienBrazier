@@ -1,34 +1,31 @@
 <?xml version="1.0" encoding="utf-8" ?>
+
 <Defs>
 	<ThingDef Name="HelixienBrazier" ParentName="FurnitureBase">
 		<defName>HelixienGasBrazier</defName>
 		<label>helixien gas brazier</label>
 		<description>An octagonal basin used to hold a fire which is powered by helixien gas. Can be toggled on and off. Will light the surroundings and create heat.</description>
+		<thingClass>Building</thingClass>
 		<category>Building</category>
 		<tickerType>Normal</tickerType>
-		<drawerType>RealtimeOnly</drawerType>
-		<fillPercent>0.5</fillPercent>
-		<statBases>
-			<MaxHitPoints>100</MaxHitPoints>
-			<WorkToBuild>100</WorkToBuild>
-			<Flammability>0</Flammability>
-			<Mass>15</Mass>
-			<MeditationFocusStrength>0.0</MeditationFocusStrength>
-		</statBases>
-		<selectable>true</selectable>
-		<designationCategory>Furniture</designationCategory>
-		<uiIconOffset>(0, -0.04)</uiIconOffset>
 		<minifiedDef>MinifiedThing</minifiedDef>
-		<stuffCategories>
-			<li>Metallic</li>
-			<li>Stony</li>
-		</stuffCategories>
-		<costStuffCount>50</costStuffCount>
-		<placeWorkers>
-			<li>PlaceWorker_Heater</li>
-			<li>PlaceWorker_MeditationOffsetBuildingsNear</li>
-		</placeWorkers>
-		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<canOverlapZones>false</canOverlapZones>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.5</fillPercent>
+		<pathCost>42</pathCost>
+		<designationCategory>Furniture</designationCategory>
+		<rotatable>false</rotatable>
+		<uiIconOffset>(0, -0.04)</uiIconOffset>
+		<graphicData>
+			<texPath>Things/Building/Misc/HelixienBrazier</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(1,0.3,0.3)</volume>
+				<offset>(0,0,-0.15)</offset>
+			</shadowData>
+		</graphicData>
 		<comps>
 			<li Class="GasNetwork.CompProperties_GasTrader">
 				<compClass>GasNetwork.CompGasTrader</compClass>
@@ -79,37 +76,42 @@
 				<commandDescKey>Fluffy.GasNetwork.CommandToggleGas.Desc</commandDescKey>
 			</li>
 		</comps>
-		<canOverlapZones>false</canOverlapZones>
-		<altitudeLayer>Building</altitudeLayer>
-		<passability>PassThroughOnly</passability>
-		<pathCost>42</pathCost>
-		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToBuild>100</WorkToBuild>
+			<Flammability>0</Flammability>
+			<Mass>15</Mass>
+			<MeditationFocusStrength>0.0</MeditationFocusStrength>
+		</statBases>
 		<researchPrerequisites>
 			<li>ComplexFurniture</li>
 			<li>VFE_GasExtraction</li>
 		</researchPrerequisites>
-		<graphicData>
-			<texPath>Things/Building/Misc/HelixienBrazier</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>CutoutComplex</shaderType>
-			<shadowData>
-				<volume>(0.5,0.3,0.7)</volume>
-				<offset>(0,0,-0.15)</offset>
-			</shadowData>
-			<damageData>
-				<rect>(0.234375,0,0.515625,0.984375)</rect>
-				<cornerTL>Damage/Corner</cornerTL>
-				<cornerTR>Damage/Corner</cornerTR>
-				<cornerBL>Damage/Corner</cornerBL>
-				<cornerBR>Damage/Corner</cornerBR>
-			</damageData>
-		</graphicData>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>50</costStuffCount>
+		<placeWorkers>
+			<li>PlaceWorker_Heater</li>
+			<li>PlaceWorker_MeditationOffsetBuildingsNear</li>
+		</placeWorkers>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<drawerType>RealtimeOnly</drawerType>
 	</ThingDef>
 	
 	<ThingDef MayRequire="Ludeon.RimWorld.Ideology" ParentName="HelixienBrazier">
 		<defName>HelixienGasDarklightBrazier</defName>
 		<label>helixien gas darklight brazier</label>
 		<description>A specially mixed helixien gas brazier that illuminates its surroundings with darklight and creates heat. Can be toggled on and off. These satisfy royal brazier requirements.</description>
+		<graphicData Inherit="False">
+			<texPath>Things/Building/Misc/HelixienDarklightBrazier</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(1,0.3,0.3)</volume>
+				<offset>(0,0,-0.15)</offset>
+			</shadowData>
+		</graphicData>
 		<comps Inherit="False">
 			<li Class="GasNetwork.CompProperties_GasTrader">
 				<compClass>GasNetwork.CompGasTrader</compClass>
@@ -160,21 +162,5 @@
 				<commandDescKey>Fluffy.GasNetwork.CommandToggleGas.Desc</commandDescKey>
 			</li>
 		</comps>
-		<graphicData Inherit="False">
-			<texPath>Things/Building/Misc/HelixienDarklightBrazier</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>CutoutComplex</shaderType>
-			<shadowData>
-				<volume>(0.5,0.3,0.7)</volume>
-				<offset>(0,0,-0.15)</offset>
-			</shadowData>
-			<damageData>
-				<rect>(0.234375,0,0.515625,0.984375)</rect>
-				<cornerTL>Damage/Corner</cornerTL>
-				<cornerTR>Damage/Corner</cornerTR>
-				<cornerBL>Damage/Corner</cornerBL>
-				<cornerBR>Damage/Corner</cornerBR>
-			</damageData>
-		</graphicData>
 	</ThingDef>
 </Defs>
